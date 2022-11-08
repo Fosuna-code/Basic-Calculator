@@ -1,0 +1,121 @@
+/*Using mobile first in this CSS file*/
+/*Dark mode it's the default style, but there's a way to change to ligth mode*/
+:root{
+    /*Colors*/
+    --background-c:linear-gradient(191.34deg, #17181A -4.95%, #17181A 103.74%);
+    --clean-color-bacground:#616161;
+    --clean-color: #E5E5E5;
+    --operator-color-background: #FF7629;
+    --operator-color: black;
+    --number-color-background: #303136;
+    --number-color:#FF7629;
+    --equal-color: #17181A;
+    --equal-color-background: #FFFFFF;
+    --result-color-number: #FFFFFF;
+    --result-color-operator: #FF7629;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 64.5%;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background:var(--background-c);
+
+}
+button{
+    border: none;
+    text-decoration: none;    
+}
+/*Result section*/
+.container{
+    width: 100%;
+}
+.result{
+    margin: 30px 30px;
+    text-align: end;
+}
+.resultElement{
+    color: var(--result-color-number);
+}
+.operation{
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 36px;
+}
+.showResult{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+/*Buttons section*/
+.operationButtons{
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+}
+.operationButtons button{
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+}
+.clean{
+    background-color: var(--clean-color-bacground);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 36px;
+    font-style: normal;
+}
+.all_clean{
+    color: var(--clean-color);
+}
+
+/*Operators*/
+.operator{
+    background-color: var(--operator-color-background);
+    color: var(--operator-color);
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 2.8rem;
+}
+.multipleOperator{
+    font-size: 4rem;
+    line-height: 7.5rem;
+    
+}
+.showResultOperator{
+    background-color: var(--equal-color-background);
+    color: var(--equal-color);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 48px;
+}
+.number{
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 48px;
+    color: var(--number-color);
+    background-color: var(--number-color-background);
+}
+/* .lastColumn{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr auto 1fr;
+
+} */
+.sumOperator{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
