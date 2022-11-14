@@ -5,6 +5,7 @@
     --background-c:linear-gradient(191.34deg, #17181A -4.95%, #17181A 103.74%);
     --clean-color-bacground:#616161;
     --clean-color: #E5E5E5;
+    --cleanVectorColor: #E5E5E5;
     --operator-color-background: #FF7629;
     --operator-color: black;
     --number-color-background: #303136;
@@ -14,13 +15,20 @@
     --result-color-number: #FFFFFF;
     --result-color-operator: #FF7629;
     --shadow: none;
-    border: none;
 }
-/* .ligthTheme{
-    --shadow: box-shadow: 8px 10px 8px 0px rgb(0 0 0 / 29%) inset, 0px 4px 4px 0px rgb(0 0 0 / 25%);
+.ligthTheme{
+    --shadow:8px 10px 8px 0px rgb(0 0 0 / 29%) inset, 0px 4px 4px 0px rgb(0 0 0 / 25%);
     --clean-color: #858585;
     --clean-color-bacground: #FFFFFF;
-} */
+    --cleanVectorColor: #303030;
+    --operator-color-background: #FFFFFF;
+    --number-color-background: #FFFFFF;
+    --number-color: black;
+    --background-c: #FF7629;
+
+
+
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -41,14 +49,35 @@ button{
     box-shadow: var(--shadow);
 }
 /*Result section*/
+
+.themeToggle{
+    position: absolute;
+    /* width: 20px;
+    height: 20px; */
+    top:10px;
+    left: 10px;
+    border-radius: 50px;
+    font-size:1.2rem;
+    font-weight: 500;
+    line-height: 20px;
+    background-color: var(--number-color-background);
+    color: var(--number-color);
+    cursor: pointer;
+    padding: 3px;
+}
+
+
+
 .container{
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+    max-height: 100vh;
 }
 .result{
-    margin: 30px 30px;
+    padding: 10px 30px;
     text-align: end;
+    height: 25vh;
 }
 .resultElement{
     color: var(--result-color-number);
@@ -69,6 +98,7 @@ button{
     margin: 0 auto;
     width: 70%;
     max-width: 300px;
+    height: 70vh;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     /* grid-template-rows:auto auto 1fr auto auto; */
@@ -92,6 +122,11 @@ button{
 }
 .all_clean{
     color: var(--clean-color);
+}
+
+.filter{
+    /* fill: #303030; */
+    fill:var(--cleanVectorColor);
 }
 
 /*Operators*/

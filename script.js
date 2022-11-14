@@ -1,4 +1,6 @@
+const body = document.querySelector('body');
 //this is the result section
+
 const operation = document.querySelector('.operation');
 const showResult = document.querySelector('.showResult');
 
@@ -11,7 +13,22 @@ const numbers =  document.querySelectorAll('.number');
 
 const equal = document.querySelector('.showResultOperator')
 
+const themeToggle = document.querySelector('.themeToggle');
 
+//counting numbers and operations (if the)
+
+themeToggle.addEventListener('click',() =>{
+    body.classList.toggle('ligthTheme')
+    all_clean.classList.toggle('ligthTheme');
+    single_clean.classList.toggle('ligthTheme');
+    equal.classList.toggle('ligthTheme');
+    operators.forEach(element => {
+        element.classList.toggle('ligthTheme');
+    });
+    numbers.forEach(element => {
+        element.classList.toggle('ligthTheme');
+    });
+});
 
 //setting the first div operation
 operation.innerHTML +='<div style="display: inline-block"> <span>0</span> </div>'
@@ -40,6 +57,11 @@ all_clean.addEventListener('click',() => {
 
 operators.forEach(element => {
     element.addEventListener('click', ()=>{
+        // if (operation.lastChild.innerText.length >= 21){
+        //     alert('21 digits are the max');
+        //     return;
+        // }
+
         //getting an array with all the operators (operatorsValue)
         let lastCharacterOperation = operation.innerText.charAt(operation.innerText.length - 1);
         let operatorsToArray = Array.from(operators);
@@ -52,9 +74,12 @@ operators.forEach(element => {
 
     })
 });
-
 numbers.forEach(element => {
     element.addEventListener('click',()=>{
+        // if (operation.lastChild.innerText.length >= 20){
+        //     alert('21 digits are the max');
+        //     return;
+        // }
         if ( operation.innerText == 0 ){
             operation.removeChild(operation.lastChild);
             operation.innerHTML +='<div style="display: inline-block">'
