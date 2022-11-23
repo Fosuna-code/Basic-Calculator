@@ -1,0 +1,18 @@
+/* @media (min-heigth:610px) { */
+    .operationButtons .number0{
+        width: 155px;
+    }
+    .operationButtons .showResultOperator{
+        top: 42.5px;
+        height : 117.5px;
+
+    }
+    .operationButtons .sumOperator{
+        height: 117.5px;
+    }
+    .operationButtons button{
+        width: 70px;
+        height: 75px;
+    }
+    
+/* } */
